@@ -7,7 +7,9 @@
 //
 
 import UIKit
-var list = ["gggggg","rrrrr","rfrf"]
+var list = [String]()
+
+var saveState = NSUserDefaults.standardUserDefaults()
 
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -46,13 +48,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print(list[indexPath.row])
         list = ["1","2","3","4","5"]
         tableView.reloadData()
-        performSegueWithIdentifier("segue", sender: self)
+
     }
 
     
 
     override func viewDidLoad() {
+    
         super.viewDidLoad()
+        loadState()
         setFrame()
         toastLabel.hidden = true
         itemUpdatePop.hidden = true
@@ -98,6 +102,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         list.removeAtIndex(x)
                         tableView.reloadData()
                         toast("Item Removed From List")
+                        saveState.setValue(list, forKey: "listarray")
+                        saveState.synchronize()
+
                     }
                     x = x + 1
                 }
@@ -112,6 +119,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 list.append(itemUpdateEditText.text!)
                 tableView.reloadData()
                 toast("Item Added to List")
+                saveState.setValue(list, forKey: "listarray")
+                saveState.synchronize()
+
             }
             
         }
@@ -148,6 +158,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         createListLabel.frame = CGRectMake(w*(20/320), h*(518/568), w*(80/320), h*(30/568))
         
         deleteListLabel.frame = CGRectMake(w*(215/320), h*(518/568), w*(85/320), h*(30/568))
+        
+    }
+    
+    
+    func loadState(){
+        list = saveState.valueForKey("listarray") as! [String]
         
     }
     
