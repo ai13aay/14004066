@@ -7,6 +7,8 @@
 //
 
 import UIKit
+var list = ["gggggg","rrrrr","rfrf"]
+
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let h = UIScreen.mainScreen().bounds.height
@@ -16,7 +18,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var deleteListLabel: UIButton!
     
     @IBOutlet weak var toastLabel: UILabel!
-    var list = ["gggggg","rrrrr","rfrf"]
     
     @IBOutlet weak var itemUpdatePop: UIView!
     @IBOutlet weak var itemUpdateEditText: UITextField!
@@ -45,6 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print(list[indexPath.row])
         list = ["1","2","3","4","5"]
         tableView.reloadData()
+        performSegueWithIdentifier("segue", sender: self)
     }
 
     

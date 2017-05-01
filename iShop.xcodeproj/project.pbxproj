@@ -15,6 +15,8 @@
 		E524F6DE1EB7991900F210DD /* iShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F6DD1EB7991900F210DD /* iShopTests.swift */; };
 		E524F6E91EB7991900F210DD /* iShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F6E81EB7991900F210DD /* iShopUITests.swift */; };
 		E524F6F71EB79E2C00F210DD /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F6F61EB79E2C00F210DD /* ViewControllerTableViewCell.swift */; };
+		E59486621EB7C19400518FBF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59486611EB7C19400518FBF /* SecondViewController.swift */; };
+		E59486681EB7CCD100518FBF /* ViewControllerTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59486671EB7CCD100518FBF /* ViewControllerTableViewCell2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E524F6E81EB7991900F210DD /* iShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iShopUITests.swift; sourceTree = "<group>"; };
 		E524F6EA1EB7991900F210DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E524F6F61EB79E2C00F210DD /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
+		E59486611EB7C19400518FBF /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E59486671EB7CCD100518FBF /* ViewControllerTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				E524F6C81EB7991900F210DD /* AppDelegate.swift */,
 				E524F6CA1EB7991900F210DD /* ViewController.swift */,
 				E524F6CC1EB7991900F210DD /* Main.storyboard */,
+				E59486611EB7C19400518FBF /* SecondViewController.swift */,
+				E59486671EB7CCD100518FBF /* ViewControllerTableViewCell2.swift */,
 				E524F6F61EB79E2C00F210DD /* ViewControllerTableViewCell.swift */,
 				E524F6CF1EB7991900F210DD /* Assets.xcassets */,
 				E524F6D11EB7991900F210DD /* LaunchScreen.storyboard */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59486621EB7C19400518FBF /* SecondViewController.swift in Sources */,
 				E524F6CB1EB7991900F210DD /* ViewController.swift in Sources */,
 				E524F6C91EB7991900F210DD /* AppDelegate.swift in Sources */,
+				E59486681EB7CCD100518FBF /* ViewControllerTableViewCell2.swift in Sources */,
 				E524F6F71EB79E2C00F210DD /* ViewControllerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +494,7 @@
 				E524F6EF1EB7991900F210DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E524F6F01EB7991900F210DD /* Build configuration list for PBXNativeTarget "iShopTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +503,7 @@
 				E524F6F21EB7991900F210DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E524F6F31EB7991900F210DD /* Build configuration list for PBXNativeTarget "iShopUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +512,7 @@
 				E524F6F51EB7991900F210DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
