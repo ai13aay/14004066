@@ -7,6 +7,7 @@
 //
 
 import UIKit
+var item = [String]()
 
 class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let h = UIScreen.mainScreen().bounds.height
@@ -15,14 +16,14 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     @available(iOS 2.0, *)
     internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (list.count)
+        return (item.count)
         
     }
     
     @available(iOS 2.0, *)
     internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell2", forIndexPath: indexPath) as! ViewControllerTableViewCell2
-        cell.item2.text = list[indexPath.row]
+        cell.item2.text = item[indexPath.row]
         return cell
         
         
@@ -46,11 +47,15 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        itemUpdatePop.hidden = true
+        toastLabel.hidden = false
+        loadState()
         setFrame()
         
         
     }
     
+
     
     
     
@@ -63,14 +68,54 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBAction func itemUpdateButton(sender: UIButton) {
         
+        if(itemUpdateButtonL.currentTitle == "Delete"){
+            if item.contains(itemUpdateEditText.text!) {
+                var x = 0
+                while(x < item.count){
+                    
+                    if(item[x] == itemUpdateEditText.text){
+                        item.removeAtIndex(x)
+                        tableView.reloadData()
+                        toast("Item Removed From List")
+                        saveState.setValue(item, forKey: selected + "itemarray")
+                        saveState.synchronize()
+                        
+                    }
+                    x = x + 1
+                }
+                
+            }else{
+                toast("Item Not In List")
+            }
+        } else if (itemUpdateButtonL.currentTitle == "Add"){
+            if(item.contains(itemUpdateEditText.text!)){
+                toast("Item is in the List")
+            }else{
+                item.append(itemUpdateEditText.text!)
+                tableView.reloadData()
+                toast("Item Added to List")
+                saveState.setValue(item, forKey: selected + "itemarray")
+                saveState.synchronize()
+                
+            }
+            
+        }
+        itemUpdatePop.hidden = true
+
+        
+        
     }
     
 
     
     @IBAction func addItem(sender: UIButton) {
+        itemUpdatePop.hidden = false
+        itemUpdateButtonL.setTitle("Add", forState: .Normal)
     }
 
     @IBAction func deleteItem(sender: UIButton) {
+        itemUpdatePop.hidden = false
+        itemUpdateButtonL.setTitle("Delete", forState: .Normal)
     }
     
     
@@ -105,6 +150,13 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
 
+    func loadState(){
+        if(saveState.valueForKey(selected + "itemarray") != nil){
+            item = saveState.valueForKey(selected + "itemarray") as! [String]
+        }else{
+            item.removeAll()
+        }
+    }
 
 
 }

@@ -10,7 +10,7 @@ import UIKit
 var list = [String]()
 
 var saveState = NSUserDefaults.standardUserDefaults()
-var selected = [String]()
+var selected = String()
 
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -48,9 +48,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(list[indexPath.row])
         tableView.reloadData()
-        selected.append(list[indexPath.row])
-        selected.append(String(indexPath.row))
+        selected = list[indexPath.row]
+    
         performSegueWithIdentifier("segue", sender: self)
+        print(selected)
 
     }
 
