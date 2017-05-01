@@ -14,6 +14,7 @@
 		E524F6D31EB7991900F210DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E524F6D11EB7991900F210DD /* LaunchScreen.storyboard */; };
 		E524F6DE1EB7991900F210DD /* iShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F6DD1EB7991900F210DD /* iShopTests.swift */; };
 		E524F6E91EB7991900F210DD /* iShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F6E81EB7991900F210DD /* iShopUITests.swift */; };
+		E524F6F71EB79E2C00F210DD /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F6F61EB79E2C00F210DD /* ViewControllerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E524F6E41EB7991900F210DD /* iShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E524F6E81EB7991900F210DD /* iShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iShopUITests.swift; sourceTree = "<group>"; };
 		E524F6EA1EB7991900F210DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E524F6F61EB79E2C00F210DD /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				E524F6C81EB7991900F210DD /* AppDelegate.swift */,
 				E524F6CA1EB7991900F210DD /* ViewController.swift */,
 				E524F6CC1EB7991900F210DD /* Main.storyboard */,
+				E524F6F61EB79E2C00F210DD /* ViewControllerTableViewCell.swift */,
 				E524F6CF1EB7991900F210DD /* Assets.xcassets */,
 				E524F6D11EB7991900F210DD /* LaunchScreen.storyboard */,
 				E524F6D41EB7991900F210DD /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				E524F6CB1EB7991900F210DD /* ViewController.swift in Sources */,
 				E524F6C91EB7991900F210DD /* AppDelegate.swift in Sources */,
+				E524F6F71EB79E2C00F210DD /* ViewControllerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
