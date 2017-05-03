@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="330"/>
+            <point key="canvasLocation" x="150" y="323"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="fBo-ce-Fqt">
@@ -137,7 +137,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mP7-mq-k4R">
-                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="224" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -172,7 +172,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="e9a-uS-rlc">
-                                <rect key="frame" x="40" y="456" width="240" height="47"/>
+                                <rect key="frame" x="40" y="456" width="240" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ahm-vm-OLz">
@@ -184,11 +184,24 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="GFe-c5-LFp">
-                                        <rect key="frame" x="16" y="10" width="122" height="30"/>
+                                        <rect key="frame" x="16" y="10" width="110" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="NY8-X0-fy1">
+                                        <rect key="frame" x="16" y="48" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="gFX-fh-K9z">
+                                        <rect key="frame" x="123" y="47" width="94" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="countSteppper:" destination="IHN-hD-m7g" eventType="valueChanged" id="7df-Sl-WAk"/>
+                                        </connections>
+                                    </stepper>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92156822640000002" green="0.92156822640000002" blue="0.92156822640000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -206,10 +219,12 @@
                     <navigationItem key="navigationItem" id="1am-bc-v54"/>
                     <connections>
                         <outlet property="addItemLabel" destination="bO4-Dk-ZCX" id="FzU-EF-VOV"/>
+                        <outlet property="countStepperL" destination="gFX-fh-K9z" id="Lhe-Mz-com"/>
                         <outlet property="deleteItemLabel" destination="ndg-Zv-th7" id="VA5-CH-XCg"/>
                         <outlet property="itemUpdateButtonL" destination="ahm-vm-OLz" id="WTF-9Y-E6h"/>
                         <outlet property="itemUpdateEditText" destination="GFe-c5-LFp" id="7pg-j2-hmd"/>
                         <outlet property="itemUpdatePop" destination="e9a-uS-rlc" id="HGT-zG-OiE"/>
+                        <outlet property="itemsText" destination="NY8-X0-fy1" id="kjG-71-Jao"/>
                         <outlet property="tableView" destination="sHE-KY-J8j" id="thP-7W-8h4"/>
                         <outlet property="toastLabel" destination="try-Lv-ffY" id="GCP-9q-y1s"/>
                     </connections>

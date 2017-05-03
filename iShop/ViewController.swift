@@ -60,7 +60,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     
         performSegueWithIdentifier("segue", sender: self)
-        print(selected)
 
     }
 
@@ -69,6 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        
         loadState()
         setFrame()
         toastLabel.hidden = true
@@ -78,6 +78,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
