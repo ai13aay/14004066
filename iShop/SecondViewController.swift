@@ -7,7 +7,7 @@
 //
 
 import UIKit
-var item = [String]()
+
 
 class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let h = UIScreen.mainScreen().bounds.height

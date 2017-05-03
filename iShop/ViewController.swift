@@ -8,6 +8,7 @@
 
 import UIKit
 var list = [String]()
+var item = [String]()
 
 var saveState = NSUserDefaults.standardUserDefaults()
 var selected = String()
@@ -35,9 +36,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @available(iOS 2.0, *)
     internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        selected = list[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ViewControllerTableViewCell
         cell.item.text = list[indexPath.row]
-        cell.count.text = String(list.count)
+        var numbers = 0
+        
+        if(saveState.valueForKey(selected + "itemarray") != nil){
+            let counts = saveState.valueForKey(selected + "itemarray") as! [String]
+            numbers = counts.count
+            
+        }
+        cell.count.text = String(numbers)
         return cell
         
         
@@ -48,7 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(list[indexPath.row])
         tableView.reloadData()
-        selected = list[indexPath.row]
+        
     
         performSegueWithIdentifier("segue", sender: self)
         print(selected)
@@ -167,7 +176,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func loadState(){
-        list = saveState.valueForKey("listarray") as! [String]
+        if(saveState.valueForKey("listarray") != nil){
+            list = saveState.valueForKey("listarray") as! [String]
+        }
         
     }
     
