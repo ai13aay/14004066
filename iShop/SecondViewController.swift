@@ -12,6 +12,8 @@ import UIKit
 class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let h = UIScreen.mainScreen().bounds.height
     let w = UIScreen.mainScreen().bounds.width
+    var selected2 = -100
+    
 
     
     @available(iOS 2.0, *)
@@ -30,15 +32,34 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
-    
-    @IBOutlet weak var itemsText: UITextField!
-
-  
-    @IBAction func countSteppper(sender: UIStepper) {
-        itemsText.text = String(Int(sender.value))
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        selected2 = indexPath.row
+        optionPop.hidden = false
+        
+        
     }
     
-    @IBOutlet weak var countStepperL: UIStepper!
+    func editItem(index: NSIndexPath){
+        item[index.row] = "Changed"
+        
+    }
+    
+    
+    @IBOutlet weak var backGroundImage: UIImageView!
+    
+    @IBOutlet weak var bottomBackground: UIImageView!
+    
+    @IBOutlet weak var itemsText: UITextField!
+    
+    @IBOutlet weak var optionPop: UIView!
+    
+
+    @IBOutlet weak var stepperDown: UIButton!
+  
+
+    @IBOutlet weak var stepperUp: UIButton!
     
 
     @IBOutlet weak var tableView: UITableView!
@@ -57,14 +78,19 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        itemsText.text = "0"
         itemUpdatePop.hidden = true
-        toastLabel.hidden = false
+        optionPop.hidden = true
+        toastLabel.hidden = true
         loadState()
         setFrame()
         
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        tableView.reloadData()
+    }
 
     
     
@@ -78,58 +104,136 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBAction func itemUpdateButton(sender: UIButton) {
         
-        if(itemUpdateButtonL.currentTitle == "Delete"){
-            if item.contains(itemUpdateEditText.text!) {
-                var x = 0
-                while(x < item.count){
+        
+
+        
+        if(!itemUpdateEditText.text!.isEmpty){
+            
+            if(itemUpdateButtonL.currentTitle == "Add"){
+                
+                if(item.contains(itemUpdateEditText.text!)){
+                    toast("Item is in the List")
+                }else{
+                    item.append(itemUpdateEditText.text!  + " " + itemsText.text!)
+                    tableView.reloadData()
+                    toast("Item Added to List")
+                    saveState.setValue(item, forKey: selected + "itemarray")
+                    saveState.synchronize()
                     
-                    if(item[x] == itemUpdateEditText.text){
-                        item.removeAtIndex(x)
-                        tableView.reloadData()
-                        toast("Item Removed From List")
-                        saveState.setValue(item, forKey: selected + "itemarray")
-                        saveState.synchronize()
-                        
-                    }
-                    x = x + 1
                 }
                 
-            }else{
-                toast("Item Not In List")
-            }
-        } else if (itemUpdateButtonL.currentTitle == "Add"){
-            if(item.contains(itemUpdateEditText.text!)){
-                toast("Item is in the List")
-            }else{
-                item.append(itemUpdateEditText.text! + " (" + itemsText.text! + ")")
-                tableView.reloadData()
-                toast("Item Added to List")
+                
+                itemUpdatePop.hidden = true
+                
+                
+            }else if(itemUpdateButtonL.currentTitle == "Change"){
+                
+                item[selected2] = itemUpdateEditText.text! + itemsText.text!
+                
+                itemUpdatePop.hidden = true
+                toast("Item changed")
+                
+                selected2 = -100
                 saveState.setValue(item, forKey: selected + "itemarray")
                 saveState.synchronize()
                 
+                
+                
             }
+            tableView.reloadData()
+        }
+
+            
+            
+            
             
         }
-        itemUpdatePop.hidden = true
-
-        
-        
-    }
     
 
     
     @IBAction func addItem(sender: UIButton) {
+        itemsText.text = "1"
         itemUpdatePop.hidden = false
         itemUpdateButtonL.setTitle("Add", forState: .Normal)
     }
 
-    @IBAction func deleteItem(sender: UIButton) {
-        itemUpdatePop.hidden = false
-        itemUpdateButtonL.setTitle("Delete", forState: .Normal)
+    
+    
+    
+    
+
+    @IBOutlet weak var editTextLabel: UIButton!
+   
+    @IBAction func editText(sender: AnyObject) {
+        
+        if(selected2 != -100){
+            optionPop.hidden = true
+            
+            itemUpdatePop.hidden = false
+            itemUpdateButtonL.setTitle("Change", forState: .Normal)
+            
+            itemUpdateEditText.text = ""
+            itemsText.text = "1"
+            
+            
+            
+        }
+    }
+    
+    
+    @IBAction func deleteItem(sender: AnyObject) {
+        
+        if(selected2 != -100){
+            
+            item.removeAtIndex(selected2)
+            tableView.reloadData()
+            selected2 = -100
+            optionPop.hidden = true
+            saveState.setValue(item, forKey: selected + "itemarray")
+            saveState.synchronize()
+            toast("Item Removed from List")
+
+            
+        }
+        
+        
+    }
+    @IBAction func closeOptionPop(sender: AnyObject) {
+        optionPop.hidden = true
+    }
+    
+    
+    @IBOutlet weak var closeOptionPopLabel: UIButton!
+    
+    
+    
+    @IBAction func stepperM(sender: UIButton) {
+        
+       
+        var n:Int = Int(itemsText.text!)!
+        if(n>1){
+            n = n - 1
+            itemsText.text = String(n)
+            
+        }
+    }
+    
+    
+    @IBAction func stepperP(sender: UIButton) {
+        
+        var n:Int = Int(itemsText.text!)!
+        n = n + 1
+        itemsText.text = String(n)
     }
     
     
     
+    @IBOutlet weak var closePopL: UIButton!
+    
+    
+    @IBAction func closePop(sender: UIButton) {
+        itemUpdatePop.hidden = true
+    }
     
     func toast(s: String){
         toastLabel.hidden = false
@@ -144,23 +248,35 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func setFrame(){
-        toastLabel.frame = CGRectMake(w*(40/320), h*(28/568), w*(241/320), h*(21/568))
+        toastLabel.frame = CGRectMake(w*(40/320), h*(270/568), w*(240/320), h*(24/568))
         
-        tableView.frame = CGRectMake(w*(40/320), h*(57/568), w*(240/320), h*(382/568))
+        tableView.frame = CGRectMake(w*(40/320), h*(148/568), w*(240/320), h*(382/568))
         
-        itemUpdatePop.frame = CGRectMake(w*(40/320), h*(456/568), w*(241/320), h*(92/568))
+        itemUpdatePop.frame = CGRectMake(w*(40/320), h*(221/568), w*(240/320), h*(126/568))
         
-        itemUpdateEditText.frame = CGRectMake(w*(16/320), h*(10/568), w*(130/320), h*(30/568))
+        itemUpdateEditText.frame = CGRectMake(w*(20/320), h*(20/568), w*(207/320), h*(30/568))
         
-        itemUpdateButtonL.frame = CGRectMake(w*(171/320), h*(9/568), w*(46/320), h*(30/568))
+        itemUpdateButtonL.frame = CGRectMake(w*(90/320), h*(90/568), w*(56/320), h*(30/568))
         
-        addItemLabel.frame = CGRectMake(w*(20/320), h*(518/568), w*(80/320), h*(30/568))
+        addItemLabel.frame = CGRectMake(w*(32/320), h*(518/568), w*(80/320), h*(30/568))
         
         deleteItemLabel.frame = CGRectMake(w*(215/320), h*(518/568), w*(85/320), h*(30/568))
         
-        itemsText.frame = CGRectMake(w*(16/320), h*(48/568), w*(97/320), h*(30/568))
+        itemsText.frame = CGRectMake(w*(86/320), h*(58/568), w*(68/320), h*(30/568))
         
-        countStepperL.frame = CGRectMake(w*(123/320), h*(47/568), w*(85/320), h*(30/568))
+        stepperUp.frame = CGRectMake(w*(162/320), h*(58/568), w*(30/320), h*(30/568))
+        
+        stepperDown.frame = CGRectMake(w*(48/320), h*(58/568), w*(30/320), h*(30/568))
+        
+        backGroundImage.frame = CGRectMake(w*(0/320), h*(6/568), w*(320/320), h*(562/568))
+        
+        bottomBackground.frame = CGRectMake(w*(0/320), h*(492/568), w*(321/320), h*(76/568))
+        closePopL.frame = CGRectMake(w*(206/320), h*(96/568), w*(34/320), h*(30/568))
+        
+        deleteItemLabel.frame = CGRectMake(w*(81/320), h*(15/568), w*(79/320), h*(30/568))
+        editTextLabel.frame = CGRectMake(w*(76/320), h*(63/568), w*(88/320), h*(30/568))
+        
+        closeOptionPopLabel.frame = CGRectMake(w*(0/320), h*(0/568), w*(1/320), h*(1/568))
     
         
         
@@ -169,6 +285,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     func loadState(){
         if(saveState.valueForKey(selected + "itemarray") != nil){
             item = saveState.valueForKey(selected + "itemarray") as! [String]
+            
         }else{
             item.removeAll()
         }

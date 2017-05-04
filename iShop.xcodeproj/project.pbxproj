@@ -17,6 +17,9 @@
 		E524F6F71EB79E2C00F210DD /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F6F61EB79E2C00F210DD /* ViewControllerTableViewCell.swift */; };
 		E59486621EB7C19400518FBF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59486611EB7C19400518FBF /* SecondViewController.swift */; };
 		E59486681EB7CCD100518FBF /* ViewControllerTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59486671EB7CCD100518FBF /* ViewControllerTableViewCell2.swift */; };
+		E5CBEC761EBB958300A69084 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CBEC731EBB958300A69084 /* background.png */; };
+		E5CBEC771EBB958300A69084 /* blackBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CBEC741EBB958300A69084 /* blackBottom.png */; };
+		E5CBEC781EBB958300A69084 /* buttonBack.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CBEC751EBB958300A69084 /* buttonBack.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		E524F6F61EB79E2C00F210DD /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		E59486611EB7C19400518FBF /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E59486671EB7CCD100518FBF /* ViewControllerTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell2.swift; sourceTree = "<group>"; };
+		E5CBEC731EBB958300A69084 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = pics/background.png; sourceTree = "<group>"; };
+		E5CBEC741EBB958300A69084 /* blackBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackBottom.png; path = pics/blackBottom.png; sourceTree = "<group>"; };
+		E5CBEC751EBB958300A69084 /* buttonBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonBack.png; path = pics/buttonBack.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,9 @@
 				E524F6DC1EB7991900F210DD /* iShopTests */,
 				E524F6E71EB7991900F210DD /* iShopUITests */,
 				E524F6C61EB7991900F210DD /* Products */,
+				E5CBEC731EBB958300A69084 /* background.png */,
+				E5CBEC741EBB958300A69084 /* blackBottom.png */,
+				E5CBEC751EBB958300A69084 /* buttonBack.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,8 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CBEC781EBB958300A69084 /* buttonBack.png in Resources */,
 				E524F6D31EB7991900F210DD /* LaunchScreen.storyboard in Resources */,
+				E5CBEC761EBB958300A69084 /* background.png in Resources */,
 				E524F6D01EB7991900F210DD /* Assets.xcassets in Resources */,
+				E5CBEC771EBB958300A69084 /* blackBottom.png in Resources */,
 				E524F6CE1EB7991900F210DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

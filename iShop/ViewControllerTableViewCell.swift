@@ -11,9 +11,9 @@ import UIKit
 class ViewControllerTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var item: UITextField!
-    
-    @IBOutlet weak var count: UITextField!
+    @IBOutlet weak var item: UILabel!
+ 
+    @IBOutlet weak var count: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
