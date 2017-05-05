@@ -44,6 +44,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
 
 
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var boughtTitle: UIImageView!
 
     @IBOutlet weak var tableView3: UITableView!
     override func viewDidLoad() {
@@ -80,8 +81,12 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
     func setFrame(){
         
         backgroundImage.frame = CGRectMake(w*(0/320), h*(6/568), w*(320/320), h*(562/568))
-        tableView3.frame = CGRectMake(w*(40/320), h*(148/568), w*(240/320), h*(382/568))
+        
         toastLabel.frame = CGRectMake(w*(33/320), h*(133/568), w*(240/320), h*(21/568))
+        
+        tableView3.frame = CGRectMake(w*(33/320), h*(134/568), w*(240/320), h*(347/568))
+        
+        boughtTitle.frame = CGRectMake(w*(33/320), h*(69/568), w*(240/320), h*(57/568))
         
     
     }

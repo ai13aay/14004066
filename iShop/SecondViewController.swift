@@ -78,6 +78,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var deleteItemLabel: UIButton!
     
     @IBOutlet weak var toastLabel: UILabel!
+    @IBOutlet weak var itemTitle: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -275,15 +276,15 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     func setFrame(){
         toastLabel.frame = CGRectMake(w*(40/320), h*(270/568), w*(240/320), h*(24/568))
         
-        tableView.frame = CGRectMake(w*(40/320), h*(148/568), w*(240/320), h*(382/568))
         
-        itemUpdatePop.frame = CGRectMake(w*(40/320), h*(221/568), w*(240/320), h*(126/568))
+        
+        itemUpdatePop.frame = CGRectMake(w*(26/320), h*(69/568), w*(248/320), h*(126/568))
         
         itemUpdateEditText.frame = CGRectMake(w*(20/320), h*(20/568), w*(207/320), h*(30/568))
         
         itemUpdateButtonL.frame = CGRectMake(w*(90/320), h*(90/568), w*(56/320), h*(30/568))
         
-        addItemLabel.frame = CGRectMake(w*(32/320), h*(518/568), w*(80/320), h*(30/568))
+        addItemLabel.frame = CGRectMake(w*(40/320), h*(511/568), w*(80/320), h*(30/568))
         
         deleteItemLabel.frame = CGRectMake(w*(215/320), h*(518/568), w*(85/320), h*(30/568))
         
@@ -302,8 +303,12 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         editTextLabel.frame = CGRectMake(w*(76/320), h*(63/568), w*(88/320), h*(30/568))
         
         closeOptionPopLabel.frame = CGRectMake(w*(0/320), h*(0/568), w*(1/320), h*(1/568))
-        nextScreenLabel.frame = CGRectMake(w*(244/320), h*(518/568), w*(83/320), h*(34/568))
+        nextScreenLabel.frame = CGRectMake(w*(183/320), h*(511/568), w*(102/320), h*(41/568))
+        optionPop.frame = CGRectMake(w*(40/320), h*(58/568), w*(240/320), h*(106/568))
     
+        tableView.frame = CGRectMake(w*(33/320), h*(134/568), w*(240/320), h*(347/568))
+        
+        itemTitle.frame = CGRectMake(w*(33/320), h*(69/568), w*(240/320), h*(57/568))
         
         
     }

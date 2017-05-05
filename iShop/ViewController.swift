@@ -28,11 +28,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var backgroundImage: UIImageView!
     
     @IBOutlet weak var bottomBackground: UIImageView!
+    @IBOutlet weak var itemUpdatePopBackground: UIImageView!
     
     @IBOutlet weak var itemUpdatePop: UIView!
     @IBOutlet weak var itemUpdateEditText: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var itemUpdateButtonL: UIButton!
+    
+    
+    @IBOutlet weak var listTitle: UIImageView!
     
     @available(iOS 2.0, *)
     internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -219,15 +223,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func setFrame(){
         toastLabel.frame = CGRectMake(w*(40/320), h*(270/568), w*(240/320), h*(24/568))
         
-        tableView.frame = CGRectMake(w*(40/320), h*(162/568), w*(240/320), h*(295/568))
         
-        itemUpdatePop.frame = CGRectMake(w*(40/320), h*(451/568), w*(241/320), h*(70/568))
         
-        itemUpdateEditText.frame = CGRectMake(w*(20/320), h*(20/568), w*(130/320), h*(30/568))
+        itemUpdatePop.frame = CGRectMake(w*(40/320), h*(240/568), w*(246/320), h*(86/568))
         
-        itemUpdateButtonL.frame = CGRectMake(w*(175/320), h*(20/568), w*(46/320), h*(30/568))
+        itemUpdateEditText.frame = CGRectMake(w*(26/320), h*(28/568), w*(147/320), h*(30/568))
         
-        createListLabel.frame = CGRectMake(w*(20/320), h*(518/568), w*(80/320), h*(30/568))
+        itemUpdateButtonL.frame = CGRectMake(w*(181/320), h*(28/568), w*(46/320), h*(30/568))
+        
+        createListLabel.frame = CGRectMake(w*(114/320), h*(509/568), w*(102/320), h*(41/568))
         
         
         backgroundImage.frame = CGRectMake(w*(0/320), h*(6/568), w*(320/320), h*(562/568))
@@ -241,9 +245,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         editListsLabel.frame = CGRectMake(w*(105/320), h*(20/568), w*(46/320), h*(30/568))
         
-        optionPop1.frame = CGRectMake(w*(41/320), h*(267/568), w*(240/320), h*(70/568))
+        optionPop1.frame = CGRectMake(w*(41/320), h*(70/568), w*(240/320), h*(77/568))
     
         closeOptionPop1Label.frame = CGRectMake(w*(210/320), h*(46/568), w*(30/320), h*(24/568))
+        
+        tableView.frame = CGRectMake(w*(33/320), h*(134/568), w*(240/320), h*(347/568))
+        
+        listTitle.frame = CGRectMake(w*(33/320), h*(69/568), w*(240/320), h*(57/568))
+        
+        itemUpdatePopBackground.frame = CGRectMake(w*(-5/320), h*(-8/568), w*(263/320), h*(107/568))
 
         
         

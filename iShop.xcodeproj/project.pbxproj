@@ -15,6 +15,13 @@
 		E524F6DE1EB7991900F210DD /* iShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F6DD1EB7991900F210DD /* iShopTests.swift */; };
 		E524F6E91EB7991900F210DD /* iShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F6E81EB7991900F210DD /* iShopUITests.swift */; };
 		E524F6F71EB79E2C00F210DD /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524F6F61EB79E2C00F210DD /* ViewControllerTableViewCell.swift */; };
+		E53077B81EBC9BFB0021AE0E /* oval.png in Resources */ = {isa = PBXBuildFile; fileRef = E53077B71EBC9BFB0021AE0E /* oval.png */; };
+		E53077BA1EBC9DC30021AE0E /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = E53077B91EBC9DC30021AE0E /* button.png */; };
+		E53077BC1EBCA9C00021AE0E /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = E53077BB1EBCA9C00021AE0E /* image.png */; };
+		E53077BE1EBCAA750021AE0E /* image (2).png in Resources */ = {isa = PBXBuildFile; fileRef = E53077BD1EBCAA750021AE0E /* image (2).png */; };
+		E53077C01EBCACFD0021AE0E /* itemTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = E53077BF1EBCACFD0021AE0E /* itemTitle.png */; };
+		E53077C21EBCADA60021AE0E /* listTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = E53077C11EBCADA60021AE0E /* listTitle.png */; };
+		E53077C41EBCADAB0021AE0E /* boughtTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = E53077C31EBCADAB0021AE0E /* boughtTitle.png */; };
 		E59486621EB7C19400518FBF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59486611EB7C19400518FBF /* SecondViewController.swift */; };
 		E59486681EB7CCD100518FBF /* ViewControllerTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59486671EB7CCD100518FBF /* ViewControllerTableViewCell2.swift */; };
 		E5CBEC761EBB958300A69084 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E5CBEC731EBB958300A69084 /* background.png */; };
@@ -56,6 +63,13 @@
 		E524F6E81EB7991900F210DD /* iShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iShopUITests.swift; sourceTree = "<group>"; };
 		E524F6EA1EB7991900F210DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E524F6F61EB79E2C00F210DD /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
+		E53077B71EBC9BFB0021AE0E /* oval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oval.png; path = pics/oval.png; sourceTree = "<group>"; };
+		E53077B91EBC9DC30021AE0E /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = pics/button.png; sourceTree = "<group>"; };
+		E53077BB1EBCA9C00021AE0E /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image.png; path = ../../Downloads/image.png; sourceTree = "<group>"; };
+		E53077BD1EBCAA750021AE0E /* image (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image (2).png"; path = "../../Downloads/image (2).png"; sourceTree = "<group>"; };
+		E53077BF1EBCACFD0021AE0E /* itemTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = itemTitle.png; path = pics/itemTitle.png; sourceTree = "<group>"; };
+		E53077C11EBCADA60021AE0E /* listTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = listTitle.png; path = pics/listTitle.png; sourceTree = "<group>"; };
+		E53077C31EBCADAB0021AE0E /* boughtTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boughtTitle.png; path = pics/boughtTitle.png; sourceTree = "<group>"; };
 		E59486611EB7C19400518FBF /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E59486671EB7CCD100518FBF /* ViewControllerTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell2.swift; sourceTree = "<group>"; };
 		E5CBEC731EBB958300A69084 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = pics/background.png; sourceTree = "<group>"; };
@@ -99,7 +113,14 @@
 				E524F6C61EB7991900F210DD /* Products */,
 				E5CBEC731EBB958300A69084 /* background.png */,
 				E5CBEC741EBB958300A69084 /* blackBottom.png */,
+				E53077C11EBCADA60021AE0E /* listTitle.png */,
 				E5CBEC751EBB958300A69084 /* buttonBack.png */,
+				E53077B91EBC9DC30021AE0E /* button.png */,
+				E53077BF1EBCACFD0021AE0E /* itemTitle.png */,
+				E53077BB1EBCA9C00021AE0E /* image.png */,
+				E53077C31EBCADAB0021AE0E /* boughtTitle.png */,
+				E53077B71EBC9BFB0021AE0E /* oval.png */,
+				E53077BD1EBCAA750021AE0E /* image (2).png */,
 				E5CBEC7B1EBBF6D500A69084 /* back.png */,
 			);
 			sourceTree = "<group>";
@@ -254,12 +275,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5CBEC781EBB958300A69084 /* buttonBack.png in Resources */,
+				E53077C01EBCACFD0021AE0E /* itemTitle.png in Resources */,
+				E53077C21EBCADA60021AE0E /* listTitle.png in Resources */,
+				E53077C41EBCADAB0021AE0E /* boughtTitle.png in Resources */,
 				E524F6D31EB7991900F210DD /* LaunchScreen.storyboard in Resources */,
 				E5CBEC761EBB958300A69084 /* background.png in Resources */,
 				E524F6D01EB7991900F210DD /* Assets.xcassets in Resources */,
 				E5CBEC7C1EBBF6D500A69084 /* back.png in Resources */,
+				E53077B81EBC9BFB0021AE0E /* oval.png in Resources */,
 				E5CBEC771EBB958300A69084 /* blackBottom.png in Resources */,
+				E53077BA1EBC9DC30021AE0E /* button.png in Resources */,
 				E524F6CE1EB7991900F210DD /* Main.storyboard in Resources */,
+				E53077BE1EBCAA750021AE0E /* image (2).png in Resources */,
+				E53077BC1EBCA9C00021AE0E /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

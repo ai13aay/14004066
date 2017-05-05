@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--List -->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iShop" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,13 +17,17 @@
                                 <rect key="frame" x="0.0" y="8" width="321" height="560"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listTitle.png" id="why-eD-oDv">
+                                <rect key="frame" x="41" y="97" width="240" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackBottom.png" id="9x5-Nz-sD1">
                                 <rect key="frame" x="0.0" y="492" width="321" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.22355836629867554" green="0.22389230132102966" blue="0.20303970575332642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" sectionHeaderHeight="28" sectionFooterHeight="28" id="t8u-kJ-hya">
-                                <rect key="frame" x="41" y="162" width="240" height="281"/>
+                                <rect key="frame" x="41" y="162" width="240" height="322"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.97214439655172413" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -63,10 +67,9 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e36-uT-q0K">
-                                <rect key="frame" x="20" y="507" width="92" height="41"/>
+                                <rect key="frame" x="114" y="509" width="102" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Create List" backgroundImage="buttonBack.png">
+                                <state key="normal" title="Create List" backgroundImage="button.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -76,84 +79,90 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toast Added" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="edg-hm-kCs">
                                 <rect key="frame" x="40" y="272" width="241" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.58699024822695034" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="LdI-C3-6jm">
-                                <rect key="frame" x="41" y="267" width="240" height="70"/>
+                                <rect key="frame" x="40" y="70" width="240" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval.png" id="Yf9-FV-7Xr">
+                                        <rect key="frame" x="-6" y="-8" width="261" height="97"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XQS-Uy-Dki">
-                                        <rect key="frame" x="210" y="46" width="30" height="24"/>
+                                        <rect key="frame" x="210" y="0.0" width="30" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <state key="normal" title="x"/>
+                                        <state key="normal" title="x" backgroundImage="button.png"/>
                                         <connections>
                                             <action selector="closeOptionPop1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N93-fP-Mo5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MoJ-Qg-r3v">
-                                        <rect key="frame" x="26" y="20" width="38" height="30"/>
+                                        <rect key="frame" x="33" y="26" width="47" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Open">
-                                            <color key="titleColor" red="0.2587219774723053" green="0.26299244165420532" blue="0.25049614906311035" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Open" backgroundImage="button.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="openLists:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mqc-wp-HVN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YvR-cX-NkP">
-                                        <rect key="frame" x="105" y="20" width="30" height="30"/>
+                                        <rect key="frame" x="97" y="26" width="47" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Edit">
-                                            <color key="titleColor" red="0.2587219774723053" green="0.26299244165420532" blue="0.25049614906311035" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Edit" backgroundImage="button.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="editLists:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kcg-oy-9f6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qhc-he-ayb">
-                                        <rect key="frame" x="166" y="20" width="45" height="30"/>
+                                        <rect key="frame" x="162" y="26" width="47" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Delete">
-                                            <color key="titleColor" red="0.2587219774723053" green="0.26299244165420532" blue="0.25049614906311035" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Delete" backgroundImage="button.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="deleteLists:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tXM-y8-uVx"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="Nii-73-oVg">
-                                <rect key="frame" x="41" y="84" width="241" height="70"/>
+                                <rect key="frame" x="40" y="240" width="246" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval.png" id="hEi-8G-I9Q">
+                                        <rect key="frame" x="-5" y="-8" width="263" height="107"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="inH-NF-HTu">
-                                        <rect key="frame" x="20" y="20" width="130" height="30"/>
+                                        <rect key="frame" x="26" y="28" width="147" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zBZ-aw-YdW">
-                                        <rect key="frame" x="175" y="20" width="46" height="30"/>
+                                        <rect key="frame" x="181" y="28" width="46" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Button" backgroundImage="button.png">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="itemUpdateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6IG-cB-Hz3"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.14131391048431396" green="0.1375887393951416" blue="0.11669700592756271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="otn-fP-c6E"/>
+                    <navigationItem key="navigationItem" title="List " id="otn-fP-c6E"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="backgroundImage" destination="9HM-fu-wAk" id="q6t-CP-DXi"/>
@@ -165,6 +174,8 @@
                         <outlet property="itemUpdateButtonL" destination="zBZ-aw-YdW" id="q0f-7C-imK"/>
                         <outlet property="itemUpdateEditText" destination="inH-NF-HTu" id="uz3-Eh-Npr"/>
                         <outlet property="itemUpdatePop" destination="Nii-73-oVg" id="tYL-kV-JU1"/>
+                        <outlet property="itemUpdatePopBackground" destination="hEi-8G-I9Q" id="Wrt-By-VaS"/>
+                        <outlet property="listTitle" destination="why-eD-oDv" id="3pq-sw-EhO"/>
                         <outlet property="openListsLabel" destination="MoJ-Qg-r3v" id="NOf-qS-fu5"/>
                         <outlet property="optionPop1" destination="LdI-C3-6jm" id="6Ti-d9-ynt"/>
                         <outlet property="tableView" destination="t8u-kJ-hya" id="sn7-kz-Jgn"/>
@@ -176,7 +187,7 @@
             </objects>
             <point key="canvasLocation" x="208" y="323"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Item List-->
         <scene sceneID="fBo-ce-Fqt">
             <objects>
                 <viewController id="IHN-hD-m7g" customClass="SecondViewController" customModule="iShop" customModuleProvider="target" sceneMemberID="viewController">
@@ -188,8 +199,12 @@
                                 <rect key="frame" x="0.0" y="6" width="320" height="562"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itemTitle.png" id="jgP-FS-NXR">
+                                <rect key="frame" x="40" y="76" width="240" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sHE-KY-J8j">
-                                <rect key="frame" x="40" y="68" width="240" height="420"/>
+                                <rect key="frame" x="40" y="163" width="240" height="325"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -219,64 +234,68 @@
                                     <outlet property="delegate" destination="IHN-hD-m7g" id="bv5-N0-iEZ"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="try-Lv-ffY">
+                                <rect key="frame" x="40" y="272" width="240" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.64220412234042556" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackBottom.png" id="QXA-Mi-ed6">
                                 <rect key="frame" x="0.0" y="496" width="322" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bO4-Dk-ZCX">
-                                <rect key="frame" x="32" y="518" width="65" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Aam-5M-Vl1">
+                                <rect key="frame" x="183" y="511" width="102" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Item" backgroundImage="buttonBack.png">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Bought Items" backgroundImage="button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addItem:" destination="IHN-hD-m7g" eventType="touchUpInside" id="Rb8-Zd-TnE"/>
+                                    <action selector="nextScreen:" destination="IHN-hD-m7g" eventType="touchUpInside" id="cNr-eN-IHy"/>
+                                    <segue destination="KLy-Hv-mFE" kind="push" identifier="segue2" id="hny-OQ-q0i"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="try-Lv-ffY">
-                                <rect key="frame" x="40" y="270" width="240" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92156822640000002" green="0.92156822640000002" blue="0.92156822640000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" id="e9a-uS-rlc">
-                                <rect key="frame" x="40" y="221" width="240" height="126"/>
+                                <rect key="frame" x="26" y="69" width="248" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval.png" id="mjI-T4-ZLy">
+                                        <rect key="frame" x="0.0" y="-15" width="267" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="GFe-c5-LFp">
-                                        <rect key="frame" x="20" y="20" width="207" height="30"/>
+                                        <rect key="frame" x="28" y="20" width="207" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qwb-6h-y3J">
-                                        <rect key="frame" x="162" y="58" width="30" height="30"/>
+                                        <rect key="frame" x="170" y="58" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="+">
-                                            <color key="titleColor" red="0.2587219774723053" green="0.26299244165420532" blue="0.25049614906311035" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="+" backgroundImage="button.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="stepperP:" destination="IHN-hD-m7g" eventType="touchUpInside" id="bPw-cv-hat"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pXR-EL-l2J">
-                                        <rect key="frame" x="48" y="58" width="30" height="30"/>
+                                        <rect key="frame" x="56" y="58" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="0.22355836629867554" green="0.22389230132102966" blue="0.20303970575332642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="-" backgroundImage="button.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="stepperM:" destination="IHN-hD-m7g" eventType="touchUpInside" id="8bt-6d-b8N"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ahm-vm-OLz">
-                                        <rect key="frame" x="90" y="89" width="56" height="31"/>
+                                        <rect key="frame" x="98" y="89" width="56" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Add">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -286,31 +305,36 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="NY8-X0-fy1">
-                                        <rect key="frame" x="86" y="58" width="68" height="30"/>
+                                        <rect key="frame" x="94" y="58" width="68" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xUU-o3-N5q">
-                                        <rect key="frame" x="206" y="96" width="34" height="30"/>
+                                        <rect key="frame" x="214" y="90" width="34" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal" title="x"/>
+                                        <state key="normal" title="x" backgroundImage="button.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="closePop:" destination="IHN-hD-m7g" eventType="touchUpInside" id="rzN-2p-Qbc"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.92156822640000002" green="0.92156822640000002" blue="0.92156822640000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="c6A-ce-06U">
-                                <rect key="frame" x="40" y="177" width="240" height="214"/>
+                                <rect key="frame" x="40" y="58" width="240" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ndg-Zv-th7">
-                                        <rect key="frame" x="81" y="15" width="79" height="30"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval.png" id="knh-Kk-gDV">
+                                        <rect key="frame" x="1" y="0.0" width="240" height="117"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Delete Item" backgroundImage="buttonBack.png">
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ndg-Zv-th7">
+                                        <rect key="frame" x="162" y="30" width="47" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Delete" backgroundImage="button.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -318,54 +342,52 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hWi-yW-Vn5">
-                                        <rect key="frame" x="76" y="63" width="88" height="30"/>
+                                        <rect key="frame" x="97" y="30" width="47" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.2587219774723053" green="0.26299244165420532" blue="0.25049614906311035" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Change Item">
+                                        <state key="normal" title="Edit" backgroundImage="button.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="editText:" destination="IHN-hD-m7g" eventType="touchUpInside" id="5V4-4e-Pmg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jfl-R7-X1E">
-                                        <rect key="frame" x="210" y="184" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="x"/>
-                                        <connections>
-                                            <action selector="closeOptionPop:" destination="IHN-hD-m7g" eventType="touchUpInside" id="RW4-jS-SRa"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dXC-qn-hsV">
-                                        <rect key="frame" x="91" y="128" width="61" height="30"/>
+                                        <rect key="frame" x="34" y="30" width="47" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.2587219774723053" green="0.26299244165420532" blue="0.25049614906311035" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Buy Item">
+                                        <state key="normal" title="Buy" backgroundImage="button.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="addToBuyList:" destination="IHN-hD-m7g" eventType="touchUpInside" id="Je5-xl-aw3"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jfl-R7-X1E">
+                                        <rect key="frame" x="192" y="63" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="x">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeOptionPop:" destination="IHN-hD-m7g" eventType="touchUpInside" id="RW4-jS-SRa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Aam-5M-Vl1">
-                                <rect key="frame" x="224" y="518" width="83" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bO4-Dk-ZCX">
+                                <rect key="frame" x="40" y="511" width="102" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bought List" backgroundImage="buttonBack.png">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Item" backgroundImage="button.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextScreen:" destination="IHN-hD-m7g" eventType="touchUpInside" id="cNr-eN-IHy"/>
-                                    <segue destination="KLy-Hv-mFE" kind="push" identifier="segue2" id="hny-OQ-q0i"/>
+                                    <action selector="addItem:" destination="IHN-hD-m7g" eventType="touchUpInside" id="Rb8-Zd-TnE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1am-bc-v54"/>
+                    <navigationItem key="navigationItem" title="Item List" id="1am-bc-v54"/>
                     <connections>
                         <outlet property="addItemLabel" destination="bO4-Dk-ZCX" id="FzU-EF-VOV"/>
                         <outlet property="backGroundImage" destination="WRd-CD-cSJ" id="Frg-Xx-1JN"/>
@@ -374,6 +396,7 @@
                         <outlet property="closePopL" destination="xUU-o3-N5q" id="wxg-ra-9sd"/>
                         <outlet property="deleteItemLabel" destination="ndg-Zv-th7" id="VA5-CH-XCg"/>
                         <outlet property="editTextLabel" destination="hWi-yW-Vn5" id="tuh-Wy-Pqn"/>
+                        <outlet property="itemTitle" destination="jgP-FS-NXR" id="ZQc-cK-5a4"/>
                         <outlet property="itemUpdateButtonL" destination="ahm-vm-OLz" id="WTF-9Y-E6h"/>
                         <outlet property="itemUpdateEditText" destination="GFe-c5-LFp" id="7pg-j2-hmd"/>
                         <outlet property="itemUpdatePop" destination="e9a-uS-rlc" id="HGT-zG-OiE"/>
@@ -390,7 +413,7 @@
             </objects>
             <point key="canvasLocation" x="548" y="323"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Bought Item List-->
         <scene sceneID="J11-Il-KYC">
             <objects>
                 <viewController id="KLy-Hv-mFE" customClass="ThirdViewController" customModule="iShop" customModuleProvider="target" sceneMemberID="viewController">
@@ -407,7 +430,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" sectionHeaderHeight="28" sectionFooterHeight="28" id="d78-Bp-DaR">
-                                <rect key="frame" x="33" y="162" width="240" height="326"/>
+                                <rect key="frame" x="33" y="134" width="240" height="347"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -426,19 +449,24 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l4M-P9-Kbz">
-                                <rect key="frame" x="33" y="133" width="240" height="21"/>
+                                <rect key="frame" x="33" y="274" width="240" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2587219774723053" green="0.26299244165420532" blue="0.25049614906311035" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boughtTitle.png" id="6gs-1K-WAL">
+                                <rect key="frame" x="33" y="69" width="240" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="grM-jN-E7r"/>
+                    <navigationItem key="navigationItem" title="Bought Item List" id="grM-jN-E7r"/>
                     <connections>
                         <outlet property="backgroundImage" destination="ibf-XK-J3B" id="Xme-3m-jaQ"/>
+                        <outlet property="boughtTitle" destination="6gs-1K-WAL" id="y0t-Xq-1S5"/>
                         <outlet property="tableView3" destination="d78-Bp-DaR" id="7aP-CR-4qG"/>
                         <outlet property="toastLabel" destination="l4M-P9-Kbz" id="nGN-UJ-XZX"/>
                     </connections>
@@ -469,6 +497,10 @@
     <resources>
         <image name="back.png" width="877" height="1024"/>
         <image name="blackBottom.png" width="1680" height="1050"/>
-        <image name="buttonBack.png" width="1600" height="1000"/>
+        <image name="boughtTitle.png" width="600" height="155"/>
+        <image name="button.png" width="600" height="292"/>
+        <image name="itemTitle.png" width="600" height="155"/>
+        <image name="listTitle.png" width="600" height="155"/>
+        <image name="oval.png" width="529" height="265"/>
     </resources>
 </document>
