@@ -7,6 +7,8 @@
 //
 
 import UIKit
+var bought = [String]()
+var name3 = String()
 
 
 class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -37,6 +39,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
         selected2 = indexPath.row
         optionPop.hidden = false
+        name3 = item[indexPath.row]
         
         
     }
@@ -219,6 +222,28 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
+    
+    @IBAction func addToBuyList(sender: UIButton) {
+        if(selected2 != 100){
+            
+            let s = item[selected2]
+            bought.append(s)
+            saveState.setValue(bought, forKey: selected + "boughtarray")
+            saveState.synchronize()
+            
+            toast("Item Added to Bought List")
+            selected2 = -100
+            optionPop.hidden = true
+            
+            
+            
+        }
+        
+        
+        
+    }
+    
+    
     @IBAction func stepperP(sender: UIButton) {
         
         var n:Int = Int(itemsText.text!)!
@@ -277,6 +302,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         editTextLabel.frame = CGRectMake(w*(76/320), h*(63/568), w*(88/320), h*(30/568))
         
         closeOptionPopLabel.frame = CGRectMake(w*(0/320), h*(0/568), w*(1/320), h*(1/568))
+        nextScreenLabel.frame = CGRectMake(w*(244/320), h*(518/568), w*(83/320), h*(34/568))
     
         
         
@@ -289,7 +315,19 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         }else{
             item.removeAll()
         }
+        
     }
+    
+    
+    
+    @IBOutlet weak var nextScreenLabel: UIButton!
+    
+    @IBAction func nextScreen(sender: UIButton) {
+        
+        
+    }
+    
+    
 
 
 }
