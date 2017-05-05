@@ -121,6 +121,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         optionPop1.hidden = true
         itemUpdatePop.hidden = false
         itemUpdateButtonL.setTitle("Add", forState: .Normal)
+        itemUpdateEditText.text = ""
         
         
         

@@ -181,7 +181,13 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             itemUpdatePop.hidden = false
             itemUpdateButtonL.setTitle("Change", forState: .Normal)
             
-            itemUpdateEditText.text = ""
+            //stackoverflow.com/questions/31331601/how-to-remove-numbers-from-a-string-in-swift
+
+            let editeItem = (name3.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet()) as NSArray).componentsJoinedByString("")
+            
+            
+
+            itemUpdateEditText.text = editeItem
             itemsText.text = "1"
             
             
