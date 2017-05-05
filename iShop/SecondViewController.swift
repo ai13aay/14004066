@@ -50,6 +50,9 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
+    @IBOutlet weak var buysListLabale: UIButton!
+    @IBOutlet weak var optionPopBackground: UIImageView!
+    @IBOutlet weak var itemUpdatePopBackground: UIImageView!
     @IBOutlet weak var backGroundImage: UIImageView!
     
     @IBOutlet weak var bottomBackground: UIImageView!
@@ -104,6 +107,8 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     
     @IBAction func itemUpdateButton(sender: UIButton) {
@@ -231,10 +236,14 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             bought.append(s)
             saveState.setValue(bought, forKey: selected + "boughtarray")
             saveState.synchronize()
+            item.removeAtIndex(selected2)
+            saveState.setValue(item, forKey: selected + "itemarray")
+            saveState.synchronize()
             
             toast("Item Added to Bought List")
             selected2 = -100
             optionPop.hidden = true
+            tableView.reloadData()
             
             
             
@@ -274,41 +283,47 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func setFrame(){
-        toastLabel.frame = CGRectMake(w*(40/320), h*(270/568), w*(240/320), h*(24/568))
+        toastLabel.frame = CGRectMake(w*(40/320), h*(272/568), w*(240/320), h*(24/568))
         
         
         
-        itemUpdatePop.frame = CGRectMake(w*(26/320), h*(69/568), w*(248/320), h*(126/568))
+        itemUpdatePop.frame = CGRectMake(w*(31/320), h*(221/568), w*(248/320), h*(126/568))
         
-        itemUpdateEditText.frame = CGRectMake(w*(20/320), h*(20/568), w*(207/320), h*(30/568))
+        itemUpdateEditText.frame = CGRectMake(w*(28/320), h*(20/568), w*(207/320), h*(30/568))
         
-        itemUpdateButtonL.frame = CGRectMake(w*(90/320), h*(90/568), w*(56/320), h*(30/568))
+        itemUpdateButtonL.frame = CGRectMake(w*(98/320), h*(90/568), w*(56/320), h*(30/568))
         
-        addItemLabel.frame = CGRectMake(w*(40/320), h*(511/568), w*(80/320), h*(30/568))
+        addItemLabel.frame = CGRectMake(w*(40/320), h*(511/568), w*(102/320), h*(41/568))
         
-        deleteItemLabel.frame = CGRectMake(w*(215/320), h*(518/568), w*(85/320), h*(30/568))
+        deleteItemLabel.frame = CGRectMake(w*(163/320), h*(30/568), w*(47/320), h*(30/568))
         
-        itemsText.frame = CGRectMake(w*(86/320), h*(58/568), w*(68/320), h*(30/568))
+        itemsText.frame = CGRectMake(w*(94/320), h*(58/568), w*(68/320), h*(30/568))
         
-        stepperUp.frame = CGRectMake(w*(162/320), h*(58/568), w*(30/320), h*(30/568))
+        stepperUp.frame = CGRectMake(w*(170/320), h*(58/568), w*(30/320), h*(30/568))
         
-        stepperDown.frame = CGRectMake(w*(48/320), h*(58/568), w*(30/320), h*(30/568))
+        stepperDown.frame = CGRectMake(w*(56/320), h*(58/568), w*(30/320), h*(30/568))
         
         backGroundImage.frame = CGRectMake(w*(0/320), h*(6/568), w*(320/320), h*(562/568))
         
         bottomBackground.frame = CGRectMake(w*(0/320), h*(492/568), w*(321/320), h*(76/568))
-        closePopL.frame = CGRectMake(w*(206/320), h*(96/568), w*(34/320), h*(30/568))
+        closePopL.frame = CGRectMake(w*(214/320), h*(90/568), w*(34/320), h*(30/568))
         
-        deleteItemLabel.frame = CGRectMake(w*(81/320), h*(15/568), w*(79/320), h*(30/568))
-        editTextLabel.frame = CGRectMake(w*(76/320), h*(63/568), w*(88/320), h*(30/568))
+        deleteItemLabel.frame = CGRectMake(w*(163/320), h*(30/568), w*(47/320), h*(30/568))
+        editTextLabel.frame = CGRectMake(w*(98/320), h*(30/568), w*(47/320), h*(30/568))
         
-        closeOptionPopLabel.frame = CGRectMake(w*(0/320), h*(0/568), w*(1/320), h*(1/568))
+        closeOptionPopLabel.frame = CGRectMake(w*(193/320), h*(63/568), w*(30/320), h*(30/568))
         nextScreenLabel.frame = CGRectMake(w*(183/320), h*(511/568), w*(102/320), h*(41/568))
-        optionPop.frame = CGRectMake(w*(40/320), h*(58/568), w*(240/320), h*(106/568))
+        optionPop.frame = CGRectMake(w*(40/320), h*(163/568), w*(243/320), h*(106/568))
     
-        tableView.frame = CGRectMake(w*(33/320), h*(134/568), w*(240/320), h*(347/568))
+        tableView.frame = CGRectMake(w*(40/320), h*(163/568), w*(240/320), h*(325/568))
         
         itemTitle.frame = CGRectMake(w*(33/320), h*(69/568), w*(240/320), h*(57/568))
+        
+        itemUpdatePopBackground.frame = CGRectMake(w*(0/320), h*(-15/568), w*(267/320), h*(169/568))
+        
+        optionPopBackground.frame = CGRectMake(w*(-8/320), h*(0/568), w*(260/320), h*(117/568))
+        
+        buysListLabale.frame = CGRectMake(w*(35/320), h*(30/568), w*(47/320), h*(30/568))
         
         
     }
@@ -323,6 +338,11 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
     
     
     @IBOutlet weak var nextScreenLabel: UIButton!

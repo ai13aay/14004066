@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var selected3 = String()
     
     
+    @IBOutlet weak var optionPop1Background: UIImageView!
     @IBOutlet weak var createListLabel: UIButton!
     
     @IBOutlet weak var toastLabel: UILabel!
@@ -80,6 +81,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         selected = list[indexPath.row]
         selected2 = indexPath.row
         optionPop1.hidden = false
+        itemUpdatePop.hidden = true
         
     
         
@@ -116,6 +118,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     
     @IBAction func createList(sender: UIButton) {
+        optionPop1.hidden = true
         itemUpdatePop.hidden = false
         itemUpdateButtonL.setTitle("Add", forState: .Normal)
         
@@ -128,7 +131,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
 
     
+    @IBOutlet weak var closeUpdatePopLabel: UIButton!
     
+    @IBAction func closeUpdatePop(sender: UIButton) {
+        itemUpdatePop.hidden = true
+    }
     
     @IBOutlet weak var optionPop1: UIView!
     
@@ -225,7 +232,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         
-        itemUpdatePop.frame = CGRectMake(w*(40/320), h*(240/568), w*(246/320), h*(86/568))
+        itemUpdatePop.frame = CGRectMake(w*(30/320), h*(240/568), w*(256/320), h*(86/568))
         
         itemUpdateEditText.frame = CGRectMake(w*(26/320), h*(28/568), w*(147/320), h*(30/568))
         
@@ -238,24 +245,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         bottomBackground.frame = CGRectMake(w*(0/320), h*(492/568), w*(321/320), h*(76/568))
         
-        deleteListsLabel.frame = CGRectMake(w*(166/320), h*(20/568), w*(46/320), h*(30/568))
+        deleteListsLabel.frame = CGRectMake(w*(159/320), h*(33/568), w*(46/320), h*(30/568))
         
-        openListsLabel.frame = CGRectMake(w*(26/320), h*(20/568), w*(46/320), h*(30/568))
+        openListsLabel.frame = CGRectMake(w*(24/320), h*(33/568), w*(47/320), h*(30/568))
         
         
-        editListsLabel.frame = CGRectMake(w*(105/320), h*(20/568), w*(46/320), h*(30/568))
+        editListsLabel.frame = CGRectMake(w*(92/320), h*(33/568), w*(47/320), h*(30/568))
         
-        optionPop1.frame = CGRectMake(w*(41/320), h*(70/568), w*(240/320), h*(77/568))
+        optionPop1.frame = CGRectMake(w*(31/320), h*(219/568), w*(250/320), h*(91/568))
     
-        closeOptionPop1Label.frame = CGRectMake(w*(210/320), h*(46/568), w*(30/320), h*(24/568))
+        closeOptionPop1Label.frame = CGRectMake(w*(203/320), h*(1/568), w*(30/320), h*(24/568))
         
         tableView.frame = CGRectMake(w*(33/320), h*(134/568), w*(240/320), h*(347/568))
         
         listTitle.frame = CGRectMake(w*(33/320), h*(69/568), w*(240/320), h*(57/568))
         
-        itemUpdatePopBackground.frame = CGRectMake(w*(-5/320), h*(-8/568), w*(263/320), h*(107/568))
+        itemUpdatePopBackground.frame = CGRectMake(w*(-10/320), h*(-8/568), w*(268/320), h*(107/568))
 
         
+        optionPop1Background.frame = CGRectMake(w*(-9/320), h*(-8/568), w*(266/320), h*(112/568))
+        
+        closeUpdatePopLabel.frame = CGRectMake(w*(210/320), h*(-8/568), w*(36/320), h*(30/568))
         
         
     }
